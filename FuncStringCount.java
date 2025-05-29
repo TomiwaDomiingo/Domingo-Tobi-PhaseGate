@@ -1,21 +1,18 @@
 public class FuncStringCount{
-public static String stringOccurence(String word, char letter){
+public static int stringOccurence(String word, char letter){
 int count = 0;
-for(int currentIndex = 0; currentIndex < word.length; currentIndex++){
-String result = word.toLowercase();
-if(result.charAt(currentIndex) == letter){
+word = word.toLowerCase(); 
+for (int currentIndex = 0; currentIndex < word.length(); currentIndex++){ 
+if (word.charAt(currentIndex) == Character.toLowerCase(letter)){ 
 count++;
 }
 }
+return count; 
 }
-return count;
-}
-
 public static void main(String[] args){
-String word = ("baboon");
+String word = "baboon"; 
 char letter = 'o';
-FuncStringCount wordsChecker = new FuncStringCount();
-int output = wordsChecker.stringOccurence(word);
-System.out.print(output);
+int output = stringOccurence(word, letter); 
+System.out.println(output); 
 }
 }
